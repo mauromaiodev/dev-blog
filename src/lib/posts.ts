@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import fs from 'fs';
+import path from 'path';
 
 type Metadata = {
   title: string;
@@ -14,14 +14,14 @@ function parseFrontmatter(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
   let match = frontmatterRegex.exec(fileContent);
   let frontMatterBlock = match![1];
-  let content = fileContent.replace(frontmatterRegex, "").trim();
-  let frontMatterLines = frontMatterBlock.trim().split("\n");
+  let content = fileContent.replace(frontmatterRegex, '').trim();
+  let frontMatterLines = frontMatterBlock.trim().split('\n');
   let metadata: Partial<Metadata> = {};
 
   frontMatterLines.forEach((line) => {
-    let [key, ...valueArr] = line.split(": ");
-    let value = valueArr.join(": ").trim();
-    value = value.replace(/^['"](.*)['"]$/, "$1"); // Remove quotes
+    let [key, ...valueArr] = line.split(': ');
+    let value = valueArr.join(': ').trim();
+    value = value.replace(/^['"](.*)['"]$/, '$1');
     metadata[key.trim() as keyof Metadata] = value as any;
   });
 
@@ -29,11 +29,11 @@ function parseFrontmatter(fileContent: string) {
 }
 
 function getMDXFiles(dir: any) {
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
+  return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx');
 }
 
 function readMDXFile(filePath: any) {
-  let rawContent = fs.readFileSync(filePath, "utf-8");
+  let rawContent = fs.readFileSync(filePath, 'utf-8');
   return parseFrontmatter(rawContent);
 }
 
@@ -51,5 +51,5 @@ function getMDXData(dir: any) {
 }
 
 export function getPosts() {
-  return getMDXData(path.join(process.cwd(), "src/content"));
+  return getMDXData(path.join(process.cwd(), 'src/content'));
 }

@@ -12,6 +12,5 @@ export default function Home() {
     router.replace(`${origin}/posts`);
   }, [router]);
 
-  // Return null since we are redirecting
   return null;
 }

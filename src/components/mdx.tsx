@@ -1,5 +1,3 @@
-import React, { createElement } from 'react';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -68,11 +66,11 @@ function slugify(str: any) {
   return str
     .toString()
     .toLowerCase()
-    .trim() // Remove whitespace from both ends of a string
-    .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/&/g, '-and-') // Replace & with 'and'
-    .replace(/[^\w\-]+/g, '') // Remove all non-word characters except for -
-    .replace(/\-\-+/g, '-'); // Replace multiple - with single -
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/&/g, '-and-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-');
 }
 
 // function createHeading(level: any) {
@@ -94,12 +92,6 @@ function slugify(str: any) {
 // }
 
 let components = {
-  // h1: createHeading(1),
-  // h2: createHeading(2),
-  // h3: createHeading(3),
-  // h4: createHeading(4),
-  // h5: createHeading(5),
-  // h6: createHeading(6),
   Image: RoundedImage,
   a: CustomLink,
   Callout,
