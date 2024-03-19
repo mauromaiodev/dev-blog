@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
@@ -27,7 +25,7 @@ export default function Posts({
       <div className="grid grid-cols-1 gap-10 pb-10">
         <div className="flex flex-col">
           <span className="text-4xl font-bold md:px-6 mb-6 md:mb-4">
-            My Blog
+            Dev Divers Blog
           </span>
 
           <div>
