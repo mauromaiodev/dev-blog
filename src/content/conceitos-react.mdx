@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 ---
 title: '3 Conceitos React que você precisa dominar!'
 publishedAt: '2024-06-20'
@@ -8,11 +10,11 @@ featured: 'false'
 
 # 3 Conceitos React que você precisa dominar!
 
-Link: https://youtu.be/3Jg4tsebuTg?list=PLzILwKck99iar3MQeGw3W_MoMlVBYhrCY
+**Link**: <a href="https://youtu.be/3Jg4tsebuTg?list=PLzILwKck99iar3MQeGw3W_MoMlVBYhrCY">Aula do Dev Junior Alves!</a>
 
-Complementar: https://horadecodar.com.br/como-pegar-valor-de-input-com-react-js/
+**Complementar**:  <a href="https://horadecodar.com.br/como-pegar-valor-de-input-com-react-js/">Como pegar o valor de um input</a>
 
-DOC: https://react.dev/learn/writing-markup-with-jsx
+**DOC**: <a href="https://react.dev/learn/writing-markup-with-jsx">Como escrever markup com JSX</a>
 
 Pilares do React.js:
 
@@ -28,51 +30,79 @@ Da pra usar a extensão TSX também, que se refere ao Typescript.
 
 Ou seja, um **Componente** nada mais é que uma **função que retorna JSX/TSX.**
 
-<img src="../images/conceitos-react/exemplo-jsx.png" alt="exemplo-jsx" width="600" />
+<Image
+  src="/images/exemplo-jsx.png"
+  alt="exemplo-jsx"
+  width={400}
+  height={400}
+/>
 
 1. Conceito: **COMPONENTS**
 
-Exemplo: Preciso de vários botões sendo retornados dentro da função, porém fica inviável repetir o código.
-
-<img src="../images/conceitos-react/problema-repetir-codigo.png" alt="problema-repetir-codigo" width="600" />
+<Image
+  src="/images/problema-repetir-codigo.png"
+  alt="problema-repetir-codigo"
+  width={700}
+  height={400}
+/>
 
 Resposta: Componentizar tanto a estilização quanto a estrutura, tornando o código mais legível e funcional.
 
-<img src="../images/conceitos-react/resposta-repetir-codigo.png" alt="resposta-repetir-codigo" width="600" />
+<Image
+  src="/images/resposta-repetir-codigo.png"
+  alt="resposta-repetir-codigo"
+  width={600}
+  height={400}
+/>
 
 2. Conceito: **PROPS**
 
-Problema: Porém há uma necessidade de passar um **children independente**, pra cada um dos componentes, vem o segundo conceito.
-
-<img src="../images/conceitos-react/problema-children-independente.png" alt="problema-children-independente" width="600" />
+<Image
+  src="/images/problema-children-independente.png"
+  alt="problema-children-independente"
+  width={600}
+  height={400}
+/>
 
 **Props** são os **parâmetros** da nossa função. 
 
-Resposta: No exemplo, **children** é passado como parâmetro de Button.
-
-E no **return**, ele é acessado através das **chaves { }**, que é a forma de passar uma variável javascript para dentro de um HTML.
-
-<img src="../images/conceitos-react/resposta-children-independente.png" alt="resposta-children-independente" width="600" />
+<Image
+  src="/images/resposta-children-independente.png"
+  alt="resposta-children-independente"
+  width={600}
+  height={400}
+/>
 
 3. Conceito: **"STATES (ESTADOS)"**
+
+<Image
+  src="/images/resposta-informacao-do-usuario.png"
+  alt="resposta-informacao-do-usuario"
+  width={600}
+  height={400}
+/>
 
 Problema: 
 1. Além disso, e se a gente precisasse pedir alguma informação do usuário?
 2. E como eu recupero essas informações?
 3. E como é que eu salvo isso e atualizo a minha página?
 
+<Image
+  src="/images/resposta-recuperar-informacoes-do-usuario.png"
+  alt="resposta-recuperar-informacoes-do-usuario"
+  width={600}
+  height={400}
+/>
+
 Resposta:
 1. Criar um Input.
 
-<img src="../images/conceitos-react/resposta-informacao-do-usuario.png" alt="resposta-informacao-do-usuario" width="600" />
-
-2. Usando o evento onChange, que no React, detecta quando o valor de um elemento de entrada muda.
-
-<img src="../images/conceitos-react/resposta-recuperar-informacoes-do-usuario.png" alt="resposta-recuperar-informacoes-do-usuario" width="600" />
-
-3. Usando o React Hook, **useState**. Pois é ele quem **gerencia os states (estados)** do componente.
-
-<img src="../images/conceitos-react/resposta-salvar-e-atualizar-informacoes-do-usuario.png" alt="resposta-salvar-e-atualizar-informacoes-do-usuario" width="600" />
+<Image
+  src="/images/resposta-salvar-e-atualizar-informacoes-do-usuario.png"
+  alt="resposta-salvar-e-atualizar-informacoes-do-usuario"
+  width={800}
+  height={400}
+/>
 
 No exemplo, a primeira posição passada é o **state** (**"name**"), que é o valor inicial do input e o **"setName"** é a função que **está atualizando** o state (**"name**").
 
@@ -88,11 +118,9 @@ Daria para passar o setName numa função chamada "handleChange" também.
 Exemplo: 
 ```javascript
 const [name, setName] = useState('');
-
 const handleChange = (event) => {
   setName(event.target.value);
 };
-
 return (
   <input type="text" value={name} onChange={handleChange} />
 );
