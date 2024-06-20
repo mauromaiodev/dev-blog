@@ -28,23 +28,23 @@ Da pra usar a extensão TSX também, que se refere ao Typescript.
 
 Ou seja, um **Componente** nada mais é que uma **função que retorna JSX/TSX.**
 
-<img src="../photos/conceitos-react/exemplo-jsx.png" alt="exemplo-jsx" width="600" />
+<img src="../images/conceitos-react/exemplo-jsx.png" alt="exemplo-jsx" width="600" />
 
 1. Conceito: **COMPONENTS**
 
 Exemplo: Preciso de vários botões sendo retornados dentro da função, porém fica inviável repetir o código.
 
-<img src="../photos/conceitos-react/problema-repetir-codigo.png" alt="problema-repetir-codigo" width="600" />
+<img src="../images/conceitos-react/problema-repetir-codigo.png" alt="problema-repetir-codigo" width="600" />
 
 Resposta: Componentizar tanto a estilização quanto a estrutura, tornando o código mais legível e funcional.
 
-<img src="../photos/conceitos-react/resposta-repetir-codigo.png" alt="resposta-repetir-codigo" width="600" />
+<img src="../images/conceitos-react/resposta-repetir-codigo.png" alt="resposta-repetir-codigo" width="600" />
 
 2. Conceito: **PROPS**
 
 Problema: Porém há uma necessidade de passar um **children independente**, pra cada um dos componentes, vem o segundo conceito.
 
-<img src="../photos/conceitos-react/problema-children-independente.png" alt="problema-children-independente" width="600" />
+<img src="../images/conceitos-react/problema-children-independente.png" alt="problema-children-independente" width="600" />
 
 **Props** são os **parâmetros** da nossa função. 
 
@@ -52,7 +52,7 @@ Resposta: No exemplo, **children** é passado como parâmetro de Button.
 
 E no **return**, ele é acessado através das **chaves { }**, que é a forma de passar uma variável javascript para dentro de um HTML.
 
-<img src="../photos/conceitos-react/resposta-children-independente.png" alt="resposta-children-independente" width="600" />
+<img src="../images/conceitos-react/resposta-children-independente.png" alt="resposta-children-independente" width="600" />
 
 3. Conceito: **"STATES (ESTADOS)"**
 
@@ -64,15 +64,15 @@ Problema:
 Resposta:
 1. Criar um Input.
 
-<img src="../photos/conceitos-react/resposta-informacao-do-usuario.png" alt="resposta-informacao-do-usuario" width="600" />
+<img src="../images/conceitos-react/resposta-informacao-do-usuario.png" alt="resposta-informacao-do-usuario" width="600" />
 
 2. Usando o evento onChange, que no React, detecta quando o valor de um elemento de entrada muda.
 
-<img src="../photos/conceitos-react/resposta-recuperar-informacoes-do-usuario.png" alt="resposta-recuperar-informacoes-do-usuario" width="600" />
+<img src="../images/conceitos-react/resposta-recuperar-informacoes-do-usuario.png" alt="resposta-recuperar-informacoes-do-usuario" width="600" />
 
 3. Usando o React Hook, **useState**. Pois é ele quem **gerencia os states (estados)** do componente.
 
-<img src="../photos/conceitos-react/resposta-salvar-e-atualizar-informacoes-do-usuario.png" alt="resposta-salvar-e-atualizar-informacoes-do-usuario" width="600" />
+<img src="../images/conceitos-react/resposta-salvar-e-atualizar-informacoes-do-usuario.png" alt="resposta-salvar-e-atualizar-informacoes-do-usuario" width="600" />
 
 No exemplo, a primeira posição passada é o **state** (**"name**"), que é o valor inicial do input e o **"setName"** é a função que **está atualizando** o state (**"name**").
 
