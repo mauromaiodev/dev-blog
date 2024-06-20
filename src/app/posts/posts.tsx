@@ -57,17 +57,17 @@ export default function Posts({
                           <span className="h-1 w-1 bg-secondaryDarker rounded-full" />
                           <span>
                             <span>
-                              {Intl.NumberFormat('en-US', {
+                              {Intl.NumberFormat('pt-BR', {
                                 notation: 'compact',
                               }).format(views[post.slug])}{' '}
-                              {' views'}
+                              {' visualizações'}
                             </span>
                           </span>
                           <span className="h-1 w-1 bg-secondaryDarker rounded-full" />
                           <span>
                             <span>
                               {calculateReadingTime(post.content)}
-                              {' min read'}
+                              {' min de leitura'}
                             </span>
                           </span>
                         </div>

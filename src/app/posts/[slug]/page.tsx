@@ -76,7 +76,7 @@ export default async function Blog({ params }: { params: any }) {
             className="group-hover:-translate-x-1 duration-300 group-hover:text-secondaryDark"
           />
           <span className="group-hover:text-secondaryDark duration-300">
-            Back
+            Voltar
           </span>
         </Link>
       </div>
@@ -89,17 +89,17 @@ export default async function Blog({ params }: { params: any }) {
           <span className="h-1 w-1 bg-secondaryDarker rounded-full" />
           <span>
             <span>
-              {Intl.NumberFormat('en-US', { notation: 'compact' }).format(
+              {Intl.NumberFormat('pt-BR', { notation: 'compact' }).format(
                 views,
               )}{' '}
-              {' views'}
+              {' visualizações'}
             </span>
           </span>
           <span className="h-1 w-1 bg-secondaryDarker rounded-full" />
           <span>
             <span>
               {calculateReadingTime(post.content)}
-              {' min read'}
+              {' min de leitura'}
             </span>
           </span>
         </div>
